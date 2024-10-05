@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible 3x3 Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Homepage Section -->
+    <div class="homepage">
+        <h1>Bible 3x3 Project</h1>
+        <h2>Choose Your Theme</h2>
+        <div class="theme-buttons">
+            <button class="theme-btn" data-theme="theme1">Disobedience</button>
+            <button class="theme-btn" data-theme="theme2">Covenant</button>
+            <button class="theme-btn" data-theme="theme3">Redemption</button>
+        </div>
+    </div>
+
+    <!-- Themes Selection Section -->
+    <div class="books-section hidden">
+        <h2 id="selected-theme-title">Select a Book or Analysis</h2>
+        <div class="book-buttons">
+            <button class="book-btn" data-book="Genesis">Genesis</button>
+            <button class="book-btn" data-book="Exodus">Exodus</button>
+            <button class="book-btn" data-book="Matthew">Matthew</button>
+            <button class="analysis-btn">Analysis</button>
+        </div>
+        <button class="back-btn">Back to Themes</button>
+    </div>
+
+   <!-- Modal Popup -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 id="modal-title">Content Title</h3>
+            <div class="symbols">
+                <!-- Symbol Descriptions -->
+                <p class="symbol-desc">Symbol 1 Description</p>
+                <p class="symbol-desc">Symbol 2 Description</p>
+                <p class="symbol-desc">Symbol 3 Description</p>
+            </div>
+            <img id="modal-image" src="image.jpg" alt="Related Image">
+            <p id="modal-verse">Verse: "Sample verse from the Bible."</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

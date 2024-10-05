@@ -1,0 +1,176 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Homepage Styles */
+.homepage {
+    padding: 100px 20px;
+}
+
+.homepage h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.homepage h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.theme-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.theme-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.theme-btn:hover {
+    background-color: #45a049;
+}
+
+/* Books Section Styles */
+.books-section {
+    padding: 50px 20px;
+}
+
+.books-section.hidden {
+    display: none;
+}
+
+.book-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.book-btn, .analysis-btn, .back-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #008CBA;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.book-btn:hover, .analysis-btn:hover, .back-btn:hover {
+    background-color: #007B9E;
+}
+
+.back-btn {
+    margin-top: 30px;
+    background-color: #f44336;
+}
+
+.back-btn:hover {
+    background-color: #da190b;
+}
+
+/* Modal Styles */
+.modal {
+    display: flex; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    position: relative;
+    text-align: left;
+    max-width: 90%; /* Ensures modal doesn't exceed viewport width */
+    max-height: 90%; /* Ensures modal doesn't exceed viewport height */
+    overflow-y: auto; /* Adds scroll if content exceeds max-height */
+    box-sizing: border-box;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #f44336;
+}
+
+.symbols {
+    margin: 20px 0;
+}
+
+.symbol-desc {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+#modal-image {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 60vh; /* Limits image height to 60% of viewport height */
+    object-fit: contain;
+    margin: 20px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 600px) {
+    .theme-buttons, .book-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .homepage h1 {
+        font-size: 32px;
+    }
+
+    .homepage h2 {
+        font-size: 20px;
+    }
+
+    .theme-btn, .book-btn, .analysis-btn, .back-btn {
+        width: 100%;
+        padding: 12px 0;
+    }
+}
